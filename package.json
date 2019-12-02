@@ -1,0 +1,28 @@
+{
+  "name": "trillo",
+  "version": "1.0.0",
+  "description": "Trillo booking app for flights, hotels and car rentals",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "watch:sass": "node-sass docs/sass/main.scss docs/css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+
+    "compile:sass": "node-sass docs/sass/main.scss docs/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" docs/css/style.comp.css -o docs/css/style.prefix.css",
+    "compress:css": "node-sass docs/css/style.prefix.css docs/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "codedeki",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
+  }
+}
