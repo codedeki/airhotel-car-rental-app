@@ -21,8 +21,6 @@
         flex: 0 0 100%; 
     }
 
-
-    
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -45,7 +43,6 @@
         &::webkit-input-placeholder {
             font-weight: 100;
             color: var(--color-grey-light-4); 
-
         }
     }
 
