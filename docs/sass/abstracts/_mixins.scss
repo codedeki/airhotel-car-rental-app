@@ -13,3 +13,32 @@
         box-shadow: none;
     }
 }
+
+// MEDIA QUERY MANAGER  //
+
+//smallest 500px/16 = 31.25em
+//small 650px/16 = 40.625em 
+//medium 900px/16 = 56.25em
+//large 1140/16 = 71.25em
+//largest  1200px/16 = 75em
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == bp-smallest {
+        @media only screen and (max-width: 31.25em) { @content }; // 500px
+    }
+
+    @if $breakpoint == bp-small {
+        @media only screen and (max-width: 40.625em) { @content }; //650px
+    }
+    @if $breakpoint == bp-medium {
+        @media only screen and (max-width: 56.25em) { @content }; //900px
+    }
+    
+    @if $breakpoint == bp-large {
+        @media only screen and (max-width: 71.25em) { @content }; //1140px
+    }
+    
+    @if $breakpoint == bp-largest {
+        @media only screen and (max-width: 75em) { @content }; //1200px
+    }
+}
