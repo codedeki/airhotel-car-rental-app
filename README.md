@@ -1,6 +1,6 @@
 ## Trillo UI - all-in-one booking app for flights, hotels and car rentals.
 
-The app is viewable here: https://codedeki.github.io/real-estate-site-css-grid/
+The app is viewable here: https://codedeki.github.io/airhotel-car-rental-app/
 
 ## Front-End Web Development using modern practices including:
 * HTML
